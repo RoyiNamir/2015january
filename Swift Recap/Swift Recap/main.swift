@@ -46,7 +46,97 @@ println("Hello, World!")
 
 //Closures:
 
+var alpha = ["D", "E", "A", "C", "B"];
+
+let alpha_sorted = sorted(alpha, {(s1: String, s2: String) -> Bool
+    in return s1<s2
+});
+
+for i in 0..<alpha_sorted.count-1 {
+    print("\(alpha_sorted[i]),");
+}
+println(alpha_sorted[alpha_sorted.count-1]);
+
+//Structs:
+struct Rectangle{
+    var x:Int = 0;
+    var y:Int = 0;
+    var width:Int = 0;
+    var height:Int = 0;
+    func description() -> String{
+        return "x: \(rect.x), y: \(rect.y), width: \(rect.width), height: \(rect.height).";
+    }
+}
+var rect = Rectangle();
+rect.x = 10;
+rect.y = 10;
+rect.width = 100;
+rect.height = 50;
+println(rect.description());
+//structures are value types!
 
 
+//classes:
 
+var _counter = 0;
+class Person{
+    var name: String = "John";
+    var age:Int = 0;
+    private var _lastName: String = ""; //private means: visible only within this file!
+    
+    class var counter:Int{
+        return _counter;
+    };
+    
+    
+    var lastName:String{
+        get{
+            return _lastName;
+        }
+        set{
+            _lastName = newValue;
+        }
+    }
+    
+    func description() ->String{
+        return "I'm \(self.name) and I'm \(self.age) years old.";
+    }
+}
+
+var matt = Person();
+matt.name = "Matt";
+matt.age = 40;
+var matt2 = matt; //copy reference!! (reference is a pointer to address in RAM)
+matt2.age = 50;
+var matt3 = Person();
+matt3.name = "Matt";
+matt3.age = 50;
+println(matt.description());
+matt.lastName = "Smith";
+println("person counter: \(Person.counter)");
+
+//let's show the difference between class and struct:
+struct PersonStruct{
+    var name: String = "John";
+    var age:Int = 0;
+    
+    func description() ->String{
+        return "I'm \(self.name) and I'm \(self.age) years old.";
+    }
+}
+
+var mattStruct = PersonStruct();
+mattStruct.name = "Matt";
+mattStruct.age = 40;
+var matt2Struct = mattStruct; //copy value!!!!!
+matt2Struct.age = 50;
+println(mattStruct.description());
+
+//class equality
+println(matt2 === matt);
+println(matt3 === matt);// same values of properties but yet it's not the same instance!
+println(matt3 !== matt);
+
+
+//inheritance
 
