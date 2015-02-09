@@ -255,5 +255,44 @@ extension Person{
 
 e2.bark();
 
+//protocol  (like interface in Java)
+protocol Printable{
+    func print();
+    func printB();
+}
+
+
+protocol Clickable{
+    func onClick();
+}
+
+class Button{
+    var listener: Clickable?;
+    
+}
+class MyClick:Clickable{
+    func onClick() {
+        println("clicked...");
+    }
+}
+
+var myButton:Button = Button();
+var myClick:MyClick = MyClick();
+myButton.listener = myClick;
+
+
+
+class aClass:Person, Printable {
+    func print() {
+        println("printing");
+    }
+    func printB() {
+        
+    }
+}
+
+
+
+
 
 
