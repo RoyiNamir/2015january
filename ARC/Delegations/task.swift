@@ -10,6 +10,7 @@ import Foundation
 
 protocol TaskDelegate{
     func taskStatusHasChanged(task:Task, done:Bool);
+    func removeTask(task:Task);
 }
 
 
@@ -26,6 +27,10 @@ class Task{
         }
     }
     var delgate:TaskDelegate?;
+    deinit{
+        delgate?.removeTask(self);
+        println("\(self.name) is being deinitialized.");
+    }
     
 }
 
