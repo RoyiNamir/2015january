@@ -31,7 +31,6 @@ class Project:TaskDelegate {
         
     }
     deinit{
-        listOfTasks.removeAll(keepCapacity: false);
         println("\(self.name) project is being deinitialized.")
     }
 }
@@ -52,6 +51,7 @@ for name in taskNames{
 
 p!.listOfTasks[0].done = true;
 
+p!.listOfTasks.removeAll(keepCapacity: false);
 p = nil;
 
 
