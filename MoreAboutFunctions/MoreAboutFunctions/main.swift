@@ -47,11 +47,65 @@ func power(base:Int, exponent:Int = 2) -> Int{
 let p = power(2, exponent: 3);
 let m = power(5);
 
+//Variadic parameters:
 
+func sum(numbers:Int...)->Int{
+    var sum = 0;
+    for x in numbers{
+        sum += x;
+    }
+    return sum;
+}
 
+//var myNumbers = [34, 10];
 
+//println(sum(34, 10));
 
+struct A{
+    var a:Int = 1;
+}
+var myA = A();
+//myA.a = 2;
+var x = 3;
+func aMethod(inout stamA:A, inout num:Int){
+    stamA.a = 2;
+    num = 4;
+}
 
+aMethod(&myA, &x);
 
+println(myA.a);
+println(x);
+
+func swap(inout x:Int, inout y:Int){
+    let temp = x;
+    x = y;
+    y = temp;
+}
+
+var num1 = 5;
+var num2 = 7;
+swap(&num1, &num2);
+println("num1=\(num1) and num2=\(num2)");
+
+class Dog{
+    var name:String?;
+}
+
+var d = Dog();
+//d.name = "snoopie";
+/*
+if d.name==nil{
+    println("name is nil");
+}else{
+    println("name is NOT nil");
+}
+*/
+
+if let n = d.name{
+    println("name is NOT nil, the name is: \(n)");
+}else{
+    println("name is nil");
+}
 
 
