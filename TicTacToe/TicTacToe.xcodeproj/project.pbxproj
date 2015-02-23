@@ -15,6 +15,9 @@
 		510ABAF71A924F290093DA76 /* TicTacToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510ABAF61A924F290093DA76 /* TicTacToeTests.swift */; };
 		510ABB011A9257070093DA76 /* red_rectangle.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 510ABB001A9257070093DA76 /* red_rectangle.PNG */; };
 		510ABB031A9263F10093DA76 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510ABB021A9263F10093DA76 /* Board.swift */; };
+		514224601A9B8D8D007EC9C5 /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = 5142245F1A9B8D8D007EC9C5 /* board.png */; };
+		514224631A9B9036007EC9C5 /* O.png in Resources */ = {isa = PBXBuildFile; fileRef = 514224611A9B9036007EC9C5 /* O.png */; };
+		514224641A9B9036007EC9C5 /* X.png in Resources */ = {isa = PBXBuildFile; fileRef = 514224621A9B9036007EC9C5 /* X.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		510ABAF61A924F290093DA76 /* TicTacToeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeTests.swift; sourceTree = "<group>"; };
 		510ABB001A9257070093DA76 /* red_rectangle.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_rectangle.PNG; sourceTree = "<group>"; };
 		510ABB021A9263F10093DA76 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		5142245F1A9B8D8D007EC9C5 /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board.png; sourceTree = "<group>"; };
+		514224611A9B9036007EC9C5 /* O.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = O.png; sourceTree = "<group>"; };
+		514224621A9B9036007EC9C5 /* X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = X.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,9 @@
 		510ABADD1A924F290093DA76 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				514224611A9B9036007EC9C5 /* O.png */,
+				514224621A9B9036007EC9C5 /* X.png */,
+				5142245F1A9B8D8D007EC9C5 /* board.png */,
 				510ABB001A9257070093DA76 /* red_rectangle.PNG */,
 				510ABAE01A924F290093DA76 /* AppDelegate.swift */,
 				510ABAE21A924F290093DA76 /* ViewController.swift */,
@@ -201,6 +210,9 @@
 				510ABAE61A924F290093DA76 /* Main.storyboard in Resources */,
 				510ABAEB1A924F290093DA76 /* LaunchScreen.xib in Resources */,
 				510ABAE81A924F290093DA76 /* Images.xcassets in Resources */,
+				514224631A9B9036007EC9C5 /* O.png in Resources */,
+				514224641A9B9036007EC9C5 /* X.png in Resources */,
+				514224601A9B8D8D007EC9C5 /* board.png in Resources */,
 				510ABB011A9257070093DA76 /* red_rectangle.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +425,7 @@
 				510ABAFC1A924F290093DA76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		510ABAFD1A924F290093DA76 /* Build configuration list for PBXNativeTarget "TicTacToeTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +434,7 @@
 				510ABAFF1A924F290093DA76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
